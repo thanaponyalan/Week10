@@ -15,7 +15,6 @@ namespace Lab10_WindowsFormProperties
         public Form1()
         {
             InitializeComponent();
-            this.ShowInTaskbar = false;
         }
     }
 }
