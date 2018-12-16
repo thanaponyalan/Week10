@@ -15,7 +15,7 @@ namespace Lab10_WindowsFormProperties
         public Form1()
         {
             InitializeComponent();
-            this.Size = new Size(500,300);
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
