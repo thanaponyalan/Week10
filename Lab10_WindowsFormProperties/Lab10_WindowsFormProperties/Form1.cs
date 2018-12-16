@@ -15,6 +15,7 @@ namespace Lab10_WindowsFormProperties
         public Form1()
         {
             InitializeComponent();
+            this.BackColor = Color.LightGreen;
         }
     }
 }
