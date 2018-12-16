@@ -15,7 +15,7 @@ namespace Lab10_WindowsFormProperties
         public Form1()
         {
             InitializeComponent();
-            this.BackColor = Color.LightGreen;
+            this.Size = new Size(500,300);
         }
     }
 }
