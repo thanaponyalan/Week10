@@ -19,9 +19,14 @@ namespace SumTwoNumbers
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            bool isNumeric;
             //get input values and convert strings to doubles
-            double number1 = Double.Parse(firstNumberTextBox.Text);
-            double number2 = Double.Parse(secondNumberTextBox.Text);
+            double number1;
+            isNumeric = Double.TryParse(firstNumberTextBox.Text,out number1);
+            double number2;
+            isNumeric &= Double.TryParse(secondNumberTextBox.Text,out number2);
+
+            if (!isNumeric) return;
 
             //sum the two numbers
             double sum = number1 + number2;
