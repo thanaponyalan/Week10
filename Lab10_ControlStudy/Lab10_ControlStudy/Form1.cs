@@ -13,6 +13,7 @@ namespace Lab10_ControlStudy
     public partial class Form1 : Form
     {
         Button btnHello;
+        Color btnBackColor;
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +22,19 @@ namespace Lab10_ControlStudy
             btnHello.Text = "Hello";
             this.Controls.Add(btnHello);
             btnHello.Click += BtnHello_Click;
+            btnBackColor = btnHello.BackColor;
+            btnHello.MouseEnter += BtnHello_MouseEnter;
+            btnHello.MouseLeave += BtnHello_MouseLeave;
+        }
+
+        private void BtnHello_MouseLeave(object sender, EventArgs e)
+        {
+            btnHello.BackColor = btnBackColor;
+        }
+
+        private void BtnHello_MouseEnter(object sender, EventArgs e)
+        {
+            btnHello.BackColor = Color.Green;
         }
 
         private void BtnHello_Click(object sender, EventArgs e)
